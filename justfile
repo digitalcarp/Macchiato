@@ -54,8 +54,8 @@ test:
 
 [group('lint')]
 format:
-    fd -e h -e cc . include src -x clang-format --style=file -i {}
+    fd -e h -e cc . src -x clang-format --style=file -i {}
 
 [group('lint')]
 format-check:
-    fd -e h -e cc . include src -x clang-format --style=file --Werror -n {}
+    fd -e h -e cc . src -x clang-format --style=file --Werror -n {}
