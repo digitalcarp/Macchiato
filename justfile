@@ -59,3 +59,15 @@ format:
 [group('lint')]
 format-check:
     fd -e h -e cc . src -x clang-format --style=file --Werror -n {}
+
+[group('espresso')]
+build-espresso:
+    git submodule init
+    git submodule update
+    cmake -S external/espresso -B build/espresso
+    cmake --build build/espresso
+    ctest --test-dir build/espresso
+
+[group('espresso')]
+man-espresso:
+    man build/espresso/espresso.1
