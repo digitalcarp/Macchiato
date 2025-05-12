@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: Copyright 2025 Daniel Gao
 
 add_library(macchiato INTERFACE)
+
 # set(SOURCES
 #     macchiato.cc
 # )
@@ -14,7 +15,7 @@ add_library(macchiato INTERFACE)
 
 mct_target_cxx_standard(macchiato INTERFACE)
 target_include_directories(macchiato INTERFACE include)
-# target_link_libraries(macchiato PRIVATE fmt::fmt)
+target_link_libraries(macchiato INTERFACE xoshiro::xoshiro)
 
 if(macchiato_BUILD_TESTING)
     set(TEST_SOURCES

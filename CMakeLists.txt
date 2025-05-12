@@ -28,6 +28,7 @@ if(macchiato_BUILD_TESTING)
     include(CTest)
 endif()
 
+add_subdirectory(external)
 add_subdirectory(src)
 
 add_library(macchiato::macchiato ALIAS macchiato)
