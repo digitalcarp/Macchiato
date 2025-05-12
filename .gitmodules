@@ -1,0 +1,3 @@
+[submodule "external/espresso"]
+	path = external/espresso
+	url = https://github.com/chipsalliance/espresso
